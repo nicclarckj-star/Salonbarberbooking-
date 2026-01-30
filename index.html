@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SalonBarberBooking</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header h1 span {
+      color: #c9a44c;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c9a44c;
+      color: #000;
+      padding: 14px 26px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .steps {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .box {
+      background: #f8f8f8;
+      border-left: 5px solid #c9a44c;
+      padding: 25px;
+      margin: 40px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      color: #c9a44c;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Salon<span>Barber</span>Booking</h1>
+    <p>Book trusted salons & barbers near you</p>
+    <a href="#book" class="btn">Book Now</a>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <h2>Look Good. Book Easy.</h2>
+    <p class="center">
+      Discover professional salons and barbers, choose a service, book your slot and pay conveniently.
+    </p>
+
+    <div class="steps">
+      Choose a service → Book a time → Pay via M-Pesa → Get confirmation
+    </div>
+  </section>
+
+  <!-- PAYMENT -->
+  <section>
+    <div class="box">
+      <h2>M-Pesa Payment Instructions</h2>
+      <p>
+        After booking, pay directly to the salon using their provided M-Pesa details.
+      </p>
+      <p>
+        <strong>Important:</strong> Use your <strong>Name</strong> or <strong>Booking Date</strong> as the payment reference.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLIENT BOOKING -->
+  <section id="book" class="center">
+    <h2>Book Your Appointment</h2>
+    <p>Click below to complete your booking securely.</p>
+
+    https://airtable.com/apprzNk3d3e8juyLD/pag0Ygqz5vIZLGVig/form
+    <a href="https://airtable.com/YOUR_CLIENT_BOOKING_FORM" target="_blank" class="btn">
+      Open Booking Form
+    </a>
+  </section>
+
+  <!-- SALON ONBOARDING -->
+  <section>
+    <h2>For Salons & Barbers</h2>
+    <p class="center">
+      Grow your business with online bookings and reach more clients without WhatsApp confusion.
+    </p>
+
+    <div class="grid">
+      <div class="card">✔ Online booking system</div>
+      <div class="card">✔ Automatic client confirmations</div>
+      <div class="card">✔ M-Pesa payment guidance</div>
+      <div class="card">✔ Easy booking management</div>
+      <div class="card">✔ More visibility to nearby clients</div>
+    </div>
+
+    <div class="center">
+      https://airtable.com/apprzNk3d3e8juyLD/pagGet4iHFOoYZTH5/form
+      <a href="https://airtable.com/YOUR_SALON_ONBOARDING_FORM" target="_blank" class="btn">
+        Register Your Salon
+      </a>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section>
+    <h2>Pricing</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Starter Plan</h3>
+        <p class="price">KES 1,000</p>
+        <p>per month</p>
+        <p>
+          ✔ Online bookings<br>
+          ✔ Client confirmations<br>
+          ✔ M-Pesa guidance<br>
+          ✔ Salon listing
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 SalonBarberBooking · All rights reserved
+  </footer>
+
+</body>
+  </html>
