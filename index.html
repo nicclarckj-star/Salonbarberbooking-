@@ -1,201 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SalonBarberBooking</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalonBarberBooking.com</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
+    /* ===== BASIC RESET ===== */
+    body { margin:0; font-family: Arial, sans-serif; background:#f9f9f9; color:#333; }
+    a { text-decoration:none; color:#fff; }
+    h1,h2,h3 { margin:0 0 10px 0; }
+    p { margin:0 0 15px 0; }
 
-    header {
-      background: #000;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
+    /* ===== HEADER ===== */
+    header { background:#111; color:#fff; padding:20px; text-align:center; }
+    header h1 { font-size:2rem; }
+    header nav { margin-top:10px; }
+    header nav a { margin:0 10px; color:#fff; font-weight:bold; }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+    /* ===== SECTIONS ===== */
+    section { padding:60px 20px; max-width:900px; margin:0 auto; }
+    .section-title { text-align:center; margin-bottom:40px; }
 
-    header h1 span {
-      color: #c9a44c;
-    }
+    /* ===== BUTTONS ===== */
+    .btn { background:#ff5e00; color:#fff; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; display:inline-block; }
+    .btn:hover { background:#e04d00; }
 
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #ddd;
-    }
+    /* ===== FEATURES ===== */
+    .features { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .feature { background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
 
-    .btn {
-      display: inline-block;
-      background: #c9a44c;
-      color: #000;
-      padding: 14px 26px;
-      margin-top: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-    }
+    /* ===== PRICING ===== */
+    .pricing { background:#fff; padding:30px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
+    .pricing h2 { margin-bottom:20px; }
+    .pricing ul { list-style: none; padding:0; margin:0 0 20px 0; }
+    .pricing li { margin-bottom:10px; }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .steps {
-      text-align: center;
-      font-size: 18px;
-    }
-
-    .box {
-      background: #f8f8f8;
-      border-left: 5px solid #c9a44c;
-      padding: 25px;
-      margin: 40px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 25px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .price {
-      font-size: 32px;
-      font-weight: bold;
-      color: #c9a44c;
-    }
-
-    footer {
-      background: #000;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
+    /* ===== FOOTER ===== */
+    footer { background:#111; color:#fff; text-align:center; padding:20px; margin-top:40px; }
   </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <h1>Salon<span>Barber</span>Booking</h1>
-    <p>Book trusted salons & barbers near you</p>
-    <a href="#book" class="btn">Book Now</a>
+    <h1>SalonBarberBooking.com</h1>
+    <nav>
+      <a href="#how-it-works">How it Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#salon">For Salons</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- HOW IT WORKS -->
-  <section>
-    <h2>Look Good. Book Easy.</h2>
-    <p class="center">
-      Discover professional salons and barbers, choose a service, book your slot and pay conveniently.
-    </p>
-
-    <div class="steps">
-      Choose a service → Book a time → Pay via M-Pesa → Get confirmation
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div style="text-align:center; margin-bottom:40px;">
+      <h2>Book a salon or barber in minutes — simple, fast, confirmed.</h2>
+      <a href="https://airtable.com/apprzNk3d3e8juyLD/pag0Ygqz5vIZLGVig/form" target="_blank" class="btn">Book Now</a>
     </div>
   </section>
 
-  <!-- PAYMENT -->
-  <section>
-    <div class="box">
-      <h2>M-Pesa Payment Instructions</h2>
-      <p>
-        After booking, pay directly to the salon using their provided M-Pesa details.
-      </p>
-      <p>
-        <strong>Important:</strong> Use your <strong>Name</strong> or <strong>Booking Date</strong> as the payment reference.
-      </p>
-    </div>
-  </section>
-
-  <!-- CLIENT BOOKING -->
-  <section id="book" class="center">
-    <h2>Book Your Appointment</h2>
-    <p>Click below to complete your booking securely.</p>
-
-    
-    <a href="https://airtable.com/apprzNk3d3e8juyLD/pag0Ygqz5vIZLGVig/form" target="_blank" class="btn">
-      Open Booking Form
-    </a>
-  </section>
-
-  <!-- SALON ONBOARDING -->
-  <section>
-    <h2>For Salons & Barbers</h2>
-    <p class="center">
-      Grow your business with online bookings and reach more clients without WhatsApp confusion.
-    </p>
-
-    <div class="grid">
-      <div class="card">✔ Online booking system</div>
-      <div class="card">✔ Automatic client confirmations</div>
-      <div class="card">✔ M-Pesa payment guidance</div>
-      <div class="card">✔ Easy booking management</div>
-      <div class="card">✔ More visibility to nearby clients</div>
-    </div>
-
-    <div class="center">
-      
-      <a href="https://airtable.com/apprzNk3d3e8juyLD/pagGet4iHFOoYZTH5/form" target="_blank" class="btn">
-        Register Your Salon
-      </a>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section>
-    <h2>Pricing</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Starter Plan</h3>
-        <p class="price">KES 1,000</p>
-        <p>per month</p>
-        <p>
-          ✔ Online bookings<br>
-          ✔ Client confirmations<br>
-          ✔ M-Pesa guidance<br>
-          ✔ Salon listing
-        </p>
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>1. Choose a Service</h3>
+        <p>Select the service you want from your preferred salon or barber.</p>
+      </div>
+      <div class="feature">
+        <h3>2. Book Your Time</h3>
+        <p>Pick the day and time that suits you best.</p>
+      </div>
+      <div class="feature">
+        <h3>3. Pay via M-Pesa</h3>
+        <p>Pay the salon securely using M-Pesa.</p>
+      </div>
+      <div class="feature">
+        <h3>4. Receive Confirmation</h3>
+        <p>Get an instant confirmation of your booking via email.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== PRICING ===== -->
+  <section id="pricing">
+    <h2 class="section-title">Pricing</h2>
+    <div class="pricing">
+      <h3>Starter Plan — KES 1,000 / month</h3>
+      <ul>
+        <li>✔ Online bookings</li>
+        <li>✔ Client confirmations</li>
+        <li>✔ M-Pesa payment guidance</li>
+        <li>✔ Salon listing on our platform</li>
+      </ul>
+      <p>No contracts. Cancel anytime.</p>
+      <a href="https://airtable.com/shrYourSalonFormID" target="_blank" class="btn">Register Your Salon</a>
+    </div>
+  </section>
+
+  <!-- ===== SALONS & BARBERS ===== -->
+  <section id="salon">
+    <h2 class="section-title">For Salons & Barbers</h2>
+    <p>Grow your business with SalonBarberBooking:</p>
+    <ul>
+      <li>✔ Online bookings</li>
+      <li>✔ Client confirmations</li>
+      <li>✔ M-Pesa payment assistance</li>
+      <li>✔ Greater visibility to clients</li>
+    </ul>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://airtable.com/apprzNk3d3e8juyLD/pagGet4iHFOoYZTH5/form" target="_blank" class="btn">Register Now</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p style="text-align:center;">Need help? Reach out via WhatsApp or email.</p>
+    <div style="text-align:center; margin-top:20px;">
+      <a href="https://wa.me/254725599354" target="_blank" class="btn">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
-    © 2026 SalonBarberBooking · All rights reserved
+    &copy; 2026 SalonBarberBooking.com — All Rights Reserved
   </footer>
 
 </body>
-  </html>
+</html>
