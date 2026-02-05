@@ -1,166 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Style Link World Network | Booking & Jobs</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Style Link World Network</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
+      background: #f6f6f6;
+      color: #222;
     }
+
     header {
       background: #111;
-      color: white;
+      color: #fff;
       padding: 20px;
       text-align: center;
     }
+
     section {
-      padding: 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 20px;
     }
-    h2 {
-      margin-top: 40px;
-      color: #333;
-    }
+
     .card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 15px;
+      background: #fff;
+      padding: 20px;
       border-radius: 8px;
+      margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    label {
-      display: block;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .fee {
+      background: #fff3cd;
+      padding: 10px;
+      border-left: 4px solid #ff9800;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
       margin-top: 10px;
     }
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+
+    a.button:hover {
+      background: #333;
     }
-    input[type="submit"] {
-      background: #000;
-      color: white;
-      border: none;
-      padding: 10px;
-      margin-top: 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background: #444;
-    }
+
     footer {
       background: #111;
-      color: white;
+      color: #fff;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Style Link World Network</h1>
-  <p>Book Services • Hire Professionals • Grow Your Salon</p>
+  <p>Connecting Clients, Salons & Professionals</p>
 </header>
 
-<!-- ================= BOOKINGS ================= -->
+<!-- CLIENT BOOKINGS -->
 <section>
-  <h2>Book Salon & Barber Services</h2>
-
   <div class="card">
-    <h3>Booking Form</h3>
-    <p>Please fill out the form to request a service. A small facilitation fee of <strong>KES 250</strong> applies to confirm your booking.</p>
-    <form action="YOUR_AIRTABLE_FORM_URL" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+    <h2>Book a Salon / Barber Service</h2>
 
-      <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" required>
+    <div class="fee">
+      <strong>Facilitation Fee:</strong> KES 250<br>
+      This fee confirms your request and connects you with a verified professional.
+    </div>
 
-      <label for="service">Select Service</label>
-      <select id="service" name="service" required>
-        <option value="Haircut">Haircut</option>
-        <option value="Styling">Styling</option>
-        <option value="Nails">Nails</option>
-        <option value="Salonist">Salonist</option>
-      </select>
+    <p>
+      Submit your booking request below.  
+      After submission, we will contact you on WhatsApp to confirm availability and payment.
+    </p>
 
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location" required>
+    <!-- Airtable Booking Form -->
+    <a 
+      class="button"
+      href="https://airtable.com/apprzNk3d3e8juyLD/pagS3jUIo0Pu1ZWtO/form"
+      target="_blank">
+      Submit Booking Request
+    </a>
 
-      <!-- Hidden field to pre-fill Airtable facilitation fee -->
-      <input type="hidden" name="Facilitation Fee" value="250">
+    <p style="margin-top:15px;font-size:14px;">
+      Need faster service? Chat with us directly on WhatsApp.
+    </p>
 
-      <input type="submit" value="Submit Request">
-    </form>
+    <a
+      class="button"
+      href="https://wa.me/254725599354?text=Hello%20Style%20Link,%20I%20would%20like%20to%20book%20a%20service."
+      target="_blank">
+      Chat on WhatsApp
+    </a>
   </div>
 </section>
 
-<!-- ================= JOB BOARD ================= -->
+<!-- PROFESSIONAL / JOB REQUESTS -->
 <section>
-  <h2>Salon Staff Requests</h2>
-  <p>Salon owners are actively looking for professionals. Fill the form below to apply or post a job.</p>
-
-  <!-- Job Application Form -->
   <div class="card">
-    <h3>Job Application Form</h3>
-    <form action="YOUR_AIRTABLE_JOB_FORM_URL" method="POST">
-      <label for="job-name">Full Name</label>
-      <input type="text" id="job-name" name="name" required>
+    <h2>Apply as a Professional</h2>
 
-      <label for="job-phone">Phone Number</label>
-      <input type="text" id="job-phone" name="phone" required>
+    <p>
+      Are you a Barber, Salonist, or Beautician?  
+      Join our network and get connected to real clients.
+    </p>
 
-      <label for="job-role">Role Applying For</label>
-      <select id="job-role" name="role" required>
-        <option value="Barber">Barber</option>
-        <option value="Salonist">Salonist</option>
-        <option value="Beautician">Beautician</option>
-      </select>
-
-      <label for="experience">Experience / Skills</label>
-      <input type="text" id="experience" name="experience">
-
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location">
-
-      <input type="submit" value="Submit Application">
-    </form>
+    <!-- Airtable Professional Form -->
+    <a
+      class="button"
+      href="https://airtable.com/apprzNk3d3e8juyLD/tblehnIuf50hjV3CX/viwuWWN3IJyMLtGIM"
+      target="_blank">
+      Apply / Post Job Request
+    </a>
   </div>
-
-  <!-- Example Job Listings -->
-  <div class="card">
-    <h3>Barber</h3>
-    <p><strong>Owner:</strong> Carol</p>
-    <p><strong>Requirement:</strong> Someone who relates well with Gen Z clients</p>
-  </div>
-
-  <div class="card">
-    <h3>Salonist</h3>
-    <p><strong>Owner:</strong> Carol</p>
-    <p><strong>Requirement:</strong> Familiar with latest trends</p>
-  </div>
-
-  <div class="card">
-    <h3>Beautician (Nails)</h3>
-    <p><strong>Owner:</strong> Carol</p>
-    <p><strong>Requirement:</strong> Skilled in nail care and design</p>
-  </div>
-
 </section>
 
 <footer>
   <p>© 2026 Style Link World Network</p>
-  <p>Official WhatsApp: 0725 599 354 | Connecting salons with talent & clients</p>
+  <p>WhatsApp Business: 0725 599 354</p>
 </footer>
 
 </body>
