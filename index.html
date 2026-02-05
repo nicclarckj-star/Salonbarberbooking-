@@ -1,71 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Style Link World Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    :root {
+      --black: #0b0b0b;
+      --white: #ffffff;
+      --gold: #c9a24d;
+      --soft-gold: #f4e7c5;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f6f6f6;
-      color: #222;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
     }
 
     header {
-      background: #111;
-      color: #fff;
-      padding: 20px;
+      background: linear-gradient(135deg, #000, #111);
       text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+      color: var(--gold);
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #ddd;
+      font-size: 1rem;
     }
 
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #111;
+      border: 1px solid rgba(201,162,77,0.3);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
     h2 {
+      color: var(--gold);
       margin-top: 0;
+      font-size: 1.6rem;
     }
 
-    .fee {
-      background: #fff3cd;
-      padding: 10px;
-      border-left: 4px solid #ff9800;
-      margin-bottom: 15px;
-      font-size: 14px;
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 20px 0;
     }
 
-    a.button {
+    .fee-box {
+      background: rgba(201,162,77,0.08);
+      border-left: 4px solid var(--gold);
+      padding: 15px;
+      margin: 20px 0;
+      color: var(--soft-gold);
+      font-size: 0.95rem;
+    }
+
+    .button {
       display: inline-block;
-      padding: 12px 18px;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
+      padding: 14px 22px;
       margin-top: 10px;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
     }
 
-    a.button:hover {
-      background: #333;
+    .button.alt {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      margin-left: 10px;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(201,162,77,0.4);
     }
 
     footer {
-      background: #111;
-      color: #fff;
+      background: #000;
+      border-top: 1px solid var(--gold);
       text-align: center;
-      padding: 15px;
-      font-size: 14px;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9rem;
+      }
+      .button.alt {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+      }
     }
   </style>
 </head>
@@ -74,68 +132,72 @@
 
 <header>
   <h1>Style Link World Network</h1>
-  <p>Connecting Clients, Salons & Professionals</p>
+  <p style="font-style: italic; letter-spacing: 1px;">
+    Where Beauty Meets Opportunity
+  </p>
+  <p style="margin-top:8px; font-size:0.9rem; color:#ccc;">
+    Book services. Discover talent. Grow your business.
+  </p>
 </header>
 
-<!-- CLIENT BOOKINGS -->
 <section>
+  <!-- CLIENT BOOKINGS -->
   <div class="card">
-    <h2>Book a Salon / Barber Service</h2>
+    <h2>Book a Salon or Barber Service</h2>
 
-    <div class="fee">
-      <strong>Facilitation Fee:</strong> KES 250<br>
-      This fee confirms your request and connects you with a verified professional.
-    </div>
+    <div class="divider"></div>
 
     <p>
-      Submit your booking request below.  
-      After submission, we will contact you on WhatsApp to confirm availability and payment.
+      Request professional beauty and grooming services near you.
+      We connect you with vetted professionals for quality and convenience.
     </p>
 
-    <!-- Airtable Booking Form -->
-    <a 
+    <div class="fee-box">
+      <strong>Facilitation Fee:</strong> KES 250  
+      <br>
+      This confirms your request and unlocks direct coordination with a professional.
+    </div>
+
+    <a
       class="button"
       href="https://airtable.com/apprzNk3d3e8juyLD/pagS3jUIo0Pu1ZWtO/form"
       target="_blank">
       Submit Booking Request
     </a>
 
-    <p style="margin-top:15px;font-size:14px;">
-      Need faster service? Chat with us directly on WhatsApp.
-    </p>
-
     <a
-      class="button"
+      class="button alt"
       href="https://wa.me/254725599354?text=Hello%20Style%20Link,%20I%20would%20like%20to%20book%20a%20service."
       target="_blank">
-      Chat on WhatsApp
+      WhatsApp Us
     </a>
   </div>
-</section>
 
-<!-- PROFESSIONAL / JOB REQUESTS -->
-<section>
+  <!-- PROFESSIONAL APPLICATION -->
   <div class="card">
     <h2>Apply as a Professional</h2>
 
+    <div class="divider"></div>
+
     <p>
-      Are you a Barber, Salonist, or Beautician?  
-      Join our network and get connected to real clients.
+      Are you a <strong>Barber, Salonist, or Beautician</strong>?  
+      Join our growing network and get access to paying clients.
     </p>
 
-    <!-- Airtable Professional Form -->
     <a
       class="button"
-      href="https://airtable.com/apprzNk3d3e8juyLD/tblehnIuf50hjV3CX/viwuWWN3IJyMLtGIM"
+      href="https://airtable.com/apprzNk3d3e8juyLD/pag9sKd1R4sQRZCRv/form"
       target="_blank">
-      Apply / Post Job Request
+      Apply as a Professional
     </a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Style Link World Network</p>
-  <p>WhatsApp Business: 0725 599 354</p>
+  <p>
+    © 2026 <span>Style Link World Network</span><br>
+    WhatsApp Business: <span>0725 599 354</span>
+  </p>
 </footer>
 
 </body>
